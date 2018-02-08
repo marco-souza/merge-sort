@@ -8,6 +8,7 @@
     "start": "ts-node ."
   },
   "dependencies": {
+    "@types/node": "^9.4.2",
     "ts-node": "^4.1.0",
     "typescript": "^2.7.1"
   }

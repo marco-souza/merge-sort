@@ -1,5 +1,6 @@
 import merge from './src/merge'
 const { random, round } = Math
+const { argv } = process
 
 const mergeSort = (list: Array<number>): Array<number> =>
     list.length < 2
@@ -9,12 +10,15 @@ const mergeSort = (list: Array<number>): Array<number> =>
             mergeSort(list.slice(round(list.length / 2), list.length))
         )
 
-const genList = (n = 100, curr = []): Array<number> =>
+const genList = (n, curr = []): Array<number> =>
     n > 0
         ? genList(n-1, [...curr, round(random()*1000)])
         : curr
 
+const items = argv.length > 2
+    ? parseInt(argv[2])
+    : 10
 
-const arr = genList(10)
-console.log(`Original Array: [${arr.join(' ')}]`);
-console.log(`Sorted Array: [${mergeSort(arr).join(' ')}]`);
+const arr = genList(items)
+console.log(`\nOriginal Array(${items}) -> [${arr.join(' ')}]\n`)
+console.log(`Sorted Array(${items}) -> [${mergeSort(arr).join(' ')}]\n`)
