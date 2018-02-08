@@ -1,0 +1,13 @@
+{
+  "name": "mergeSort",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marco Antonio <ma.souza.junior@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "run": "tsc ./index.js"
+  },
+  "dependencies": {
+    "typescript": "^2.7.1"
+  }
+}
