@@ -14,12 +14,13 @@
  *      and the merge result between A and remaining B
  *
  */
-const merge = (listA: Array<number>, listB: Array<number>): Array<number> => listA.length === 0
-    ? listB
-    : listB.length === 0
-        ? listA
-        : listA[0] < listB[0]
-            ? [listA[0], ...merge(listA.slice(1), listB)]
-            : [listB[0], ...merge(listA, listB.slice(1))]
+const merge = (listA: Array<number>, listB: Array<number>): Array<number> =>
+    listA.length === 0
+        ? listB
+        : listB.length === 0
+            ? listA
+            : listA[0] < listB[0]
+                ? [listA[0], ...merge(listA.slice(1), listB)]
+                : [listB[0], ...merge(listA, listB.slice(1))]
 
 export default merge;
