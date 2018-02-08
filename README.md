@@ -1,6 +1,6 @@
 # Functional Merge Sort
 
-Functional implementation of quick sort in TypeScript.
+Functional implementation of Merge Sort in TypeScript.
 
 ## Why Merge Sort?
 
