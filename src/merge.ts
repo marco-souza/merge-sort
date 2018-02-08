@@ -5,12 +5,12 @@
  *  How is it works?
  * -----------------
  *
- * Merge function receives to lists, A and B
- * - if A empty, return B
- * - if B empty, return A
- * - if A[0] less than B[0], return a new list with A[0] as the first item
+ * Merge function receives two lists, A and B
+ * - if A empty, returns B
+ * - if B empty, returns A
+ * - if A[0] less than B[0], returns a new list with A[0] as the first item
  *      and the merge result between remaining A and B
- * - if B[0] less than A[0], return a new list with B[0] as the first item
+ * - if B[0] less than A[0], returns a new list with B[0] as the first item
  *      and the merge result between A and remaining B
  *
  */
