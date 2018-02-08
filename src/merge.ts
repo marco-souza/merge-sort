@@ -5,7 +5,7 @@
  *  How is it works?
  * -----------------
  *
- * Merge function have to lists, A and B
+ * Merge function receives to lists, A and B
  * - if A empty, return B
  * - if B empty, return A
  * - if A[0] less than B[0], return a new list with A[0] as the first item
