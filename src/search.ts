@@ -22,15 +22,27 @@
 
 const { round } = Math;
 
-const binarySearch = (list: Array<number>, n: number): boolean|number => {
-    const half = round(list.length/2)
-    return list.length > 1
-        ? list[half] === n
-            ? half
-            : list[half] > n
-                ? binarySearch(list.slice(0, half), n)
-                : binarySearch(list.slice(half), n)
-        : list[0] === n ? 0 : -1
+interface valueMap {
+    'val': number,
+    'key': number,
 }
 
-export default binarySearch;
+const binarySearch = (list: Array<valueMap>, n: number): number => {
+    const half = round(list.length/2)
+    return list.length > 1
+        ? list[half].val === n
+            ? list[half].key
+            : list[half].val > n
+                ? binarySearch(list.slice(0, half), n)
+                : binarySearch(list.slice(half), n)
+        : list[0].val === n
+            ? list[0].key
+            : -1
+}
+
+// Wrap function to get position
+const search = (list: Array<number>, num: number): number => binarySearch(
+    list.map((val, key): valueMap => ({ val, key })),
+    num
+)
+export default search;

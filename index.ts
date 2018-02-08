@@ -1,4 +1,6 @@
 import merge from './src/merge'
+import search from './src/search'
+
 const { random, round } = Math
 const { argv } = process
 
@@ -20,5 +22,10 @@ const items = argv.length > 2
     : 10
 
 const arr = genList(items)
+const n = round(random() * 1000)
+
 console.log(`\nOriginal Array(${items}) -> [${arr.join(' ')}]\n`)
 console.log(`Sorted Array(${items}) -> [${mergeSort(arr).join(' ')}]\n`)
+
+const position = search(mergeSort(arr), n)
+console.log(`Check if ${n} exists -> ${position >= 0 ? `Yes, in position ${position}` : false}\n`)
