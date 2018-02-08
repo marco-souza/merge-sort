@@ -12,6 +12,8 @@ Quick sort have complexity of `O( n^2 )` in the worst case, while Merge Sort mai
 
 1. Of course, first of all, you need to run `yarn` to install the dependencies.
 
-2. To run you just need to `yarn start` and it will run with a random list of 10 items between 0 and 999.
+2. To run the project, you just need to `yarn start` and it will run with a random list of 10 items between 0 and 999.
 
-3. If you wish to test for bigger lists, you can specify the list size running: `yarn start <list-size>`, for example, `yarn start 100`.
+3. If you wish to test for bigger lists, you can specify the list size running: `yarn start <list-size>`, for example:
+
+    ```yarn start 100```
