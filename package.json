@@ -5,9 +5,10 @@
   "author": "Marco Antonio <ma.souza.junior@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "run": "tsc ./index.js"
+    "start": "ts-node ."
   },
   "dependencies": {
+    "ts-node": "^4.1.0",
     "typescript": "^2.7.1"
   }
 }
